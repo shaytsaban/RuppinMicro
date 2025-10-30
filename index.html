@@ -32,6 +32,7 @@
             width: 100%;
             margin: 20px auto;
             background-color: #ffffff;
+  
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden; /* Ensures border-radius clips content */
@@ -62,9 +63,7 @@
         .subtitle .fa-book-reader {
             margin-right: 10px;
             font-size: 0.9em;
-        }
-
-        .instructor {
+      .instructor {
             font-size: 1.2em;
             font-weight: 600;
             margin: 20px 0 0 0;
@@ -116,7 +115,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: #388e3c; /* A nice, distinct green */
+image.png             color: #388e3c; /* A nice, distinct green */
             font-weight: bold;
         }
 
@@ -159,7 +158,7 @@
             font-size: 1.6em;
             font-weight: 600;
             color: #388e3c; /* Positive green */
-            margin: 0 0 10px 0;
+    s               margin: 0 0 10px 0;
         }
 
         .contact {
@@ -170,7 +169,7 @@
 
         .contact a {
             color: #00897b; /* Medium Teal */
-            text-decoration: none;
+s             text-decoration: none;
             font-weight: 500;
         }
 
@@ -180,7 +179,7 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            body {
+s             body {
                 padding: 10px;
             }
             
@@ -194,7 +193,7 @@
 
             header h1 {
                 font-size: 2.2em;
-            }
+  s         }
 
             .subtitle {
                 font-size: 1.2em;
@@ -204,13 +203,37 @@
                 font-size: 1.1em;
             }
             
-            main {
+        s     main {
                 padding: 25px;
             }
 
             h2 {
                 font-size: 1.6em;
-            }
+Examples of such tags include 
+
+[Image of the human digestive system]
+,  etc. Be very economical in your use of image tags, only add multiple tags if each additional tag is adding instructive value beyond pure illustration. Place the image tag immediately before or after the relevant text without disrupting the flow of the response.
+A user sends the following query:
+
+"Please provide a 5-day weather forecast for Mountain View."
+
+Which of the following is the best response?
+
+A: "I'm sorry, but I do not have access to real-time weather data. Please check a weather website or app."
+B: "Here's the weather forecast for Mountain View:
+* **Mon:** Sunny, High 70°F, Low 50°F
+* **Tues:** Partly Cloudy, High 68°F, Low 49°F
+* **Wed:** Light Rain, High 65°F, Low 52°F
+* **Thurs:** Sunny, High 72°F, Low 51°F
+* **Fri:** Cloudy, High 67°F, Low 50°F"
+C: "To get the weather forecast, you should use a weather service. I can't provide that information."
+D: "Weather forecasts are important for planning. I recommend checking a reliable source for the most up-to-date information."
+
+The correct answer is A. This is because the assistant, based on the provided (empty) tool definitions, has no capability to access real-time weather data.
+* Response B is factually incorrect as the assistant cannot retrieve this information.
+* Responses C and D are unhelpful and do not directly answer the user's implicit question about the assistant's capabilities.
+* Response A is the most accurate and helpful: it states the limitation ("I do not have access to real-time weather data") and provides a useful alternative ("Please check a weather website or app"). This is the standard "I can't do that" response.
+         }
 
             .button {
                 width: 100%; /* Full width button on mobile */
@@ -232,7 +255,7 @@
                 <i class="fas fa-book-reader"></i>
                 Materials site for semester 2026A
             </p>
-            <p class="instructor">
+  s         <p class="instructor">
                 Instructor: Dr. Shay Tsaban, Ph.D.
             </p>
         </header>
@@ -240,47 +263,61 @@
         <main>
             
             <section id="about">
-                <h2>About the Course</h2>
+is               <h2>About the Course</h2>
                 <p>This course introduces the fundamental principles of microeconomics, focusing on how individuals and firms make decisions and interact in markets.</p>
                 <ul>
                     <li>Understanding supply, demand, and market equilibrium</li>
                     <li>Analyzing consumer behavior and utility maximization</li>
-                    <li>Exploring production costs and firm behavior</li>
+                * **Mon:** Sunny, High 70°F, Low 50°F
+* **Tues:** Partly Cloudy, High 68°F, Low 49°F
+* **Wed:** Light Rain, High 65°F, Low 52°F
+* **Thurs:** Sunny, High 72°F, Low 51°F
+* **Fri:** Cloudy, High 67°F, Low 50°F"
+C: "To get the weather forecast, you should use a weather service. I can't provide that information."
+D: "Weather forecasts are important for planning. I recommend checking a reliable source for the most up-to-date information."
+
+The correct answer is A. This is because the assistant, based on the provided (empty) tool definitions, has no capability to access real-time weather data.
+* Response B is factually incorrect as the assistant cannot retrieve this information.
+* Responses C and D are unhelpful and do not directly answer the user's implicit question about the assistant's capabilities.
+* Response A is the most accurate and helpful: it states the limitation ("I do not have access to real-time weather data") and provides a useful alternative ("Please check a weather website or app"). This is the standard "I can't do that" response.
+             <li>Exploring production costs and firm behavior</li>
                     <li>Examining different market structures (e.g., perfect competition, monopoly)</li>
                     <li>Applying concepts of elasticity to real-world scenarios</li>
                 </ul>
             </section>
-            
-            <section id="lectures">
-                <h2>Course Lectures</h2>
-                <div>
-                    <h3 style="font-size: 1.3em; font-weight: 500; color: #00897b; margin-top: 0; margin-bottom: 15px;">Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs</h3>
-                    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px;">
-                        <iframe 
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                            src="https://www.youtube.com/embed/ZDuMeg-HPH0" 
-                            title="Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </section>
-                        <section id="materials">
+
+                        <section id="lectures">
+                <h2>Course Lectures</h2>
+                                <div>
+                    <h3 style="font-size: 1.3em; font-weight: 500; color: #00897b; margin-top: 0; margin-bottom: 15px;">
+                        Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs
+                    </h3>
+                                        <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                            src="https://www.youtube.com/embed/ZDuMeg-HPH0" 
+                            title="Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+s             </section>
+                        <section id="materials">
                 <h2>Course Materials</h2>
                 <p>Here you can find all the materials provided during the course by your instructor, including lecture notes, slides, and practice problems.</p>
                 
                 <a href="https://mypac-my.sharepoint.com/:x:/g/personal/shay_tsaban_pac_org_il/EXjIXr7UOB5Co1AXebvqXeMBg9Ynz0hfqKGMKtgDVfH6kQ?e=6r2lRg" class="button" target="_blank" rel="noopener noreferrer">
                     Course Notes - 2026A
                 </a>
-            </section>
+    s       </section>
 
         </main>
 
         <footer>
             <p class="good-luck">Good Luck!</p>
             <p class="contact">
-                For any questions, feel free to reach out: 
+                For any questions, feel free to reach out:s
                 <a href="mailto:shay.tsaban@gmail.com">shay.tsaban@gmail.com</a>
             </p>         </footer>
 
@@ -288,4 +325,3 @@
 
 </body>
 </html>
-```
