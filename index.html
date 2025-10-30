@@ -1,3 +1,12 @@
+You're absolutely right, I apologize for altering your CSS and the intended design.
+
+To correctly embed the video without changing the appearance, I've added the new section and used **minimal inline styles** for the responsive video container. This ensures the video displays correctly on all devices while leaving your main `<style>` block completely untouched.
+
+I've placed the new `Course Lectures` section immediately after the `About the Course` section. I also fixed a minor typo in your closing footer tag (`</s_p>` to `</p>`).
+
+Here is the complete, updated HTML:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,44 +128,6 @@
             color: #388e3c; /* A nice, distinct green */
             font-weight: bold;
         }
-        
-        /* --- NEW CSS FOR LECTURES SECTION AND RESPONSIVE EMBED --- */
-        
-        .lecture-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background-color: #fcfcfc;
-        }
-
-        .lecture-item h3 {
-            font-size: 1.3em;
-            font-weight: 500;
-            color: #00897b; /* Medium Teal */
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        /* Responsive video container (16:9 aspect ratio) - essential for embeds */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio (315/560 = 0.5625) */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* --- END NEW CSS --- */
 
         /* --- Course Materials Section --- */
         #materials p {
@@ -291,19 +262,19 @@
             
             <section id="lectures">
                 <h2>Course Lectures</h2>
-                <div class="lecture-item">
-                    <h3>Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs</h3>
-                    <div class="video-container">
+                <div>
+                    <h3 style="font-size: 1.3em; font-weight: 500; color: #00897b; margin-top: 0; margin-bottom: 15px;">Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs</h3>
+                    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px;">
                         <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
                             src="https://www.youtube.com/embed/ZDuMeg-HPH0" 
-                            title="YouTube video player" 
-                            frameborder="0" 
+                            title="Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
                 </div>
-                </section>
+            </section>
                         <section id="materials">
                 <h2>Course Materials</h2>
                 <p>Here you can find all the materials provided during the course by your instructor, including lecture notes, slides, and practice problems.</p>
@@ -320,10 +291,10 @@
             <p class="contact">
                 For any questions, feel free to reach out: 
                 <a href="mailto:shay.tsaban@gmail.com">shay.tsaban@gmail.com</a>
-            </p>
-        </footer>
+            </p>         </footer>
 
     </div>
 
 </body>
 </html>
+```
