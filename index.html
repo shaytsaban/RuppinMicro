@@ -1,250 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Microeconomics - 2026A</title>
-    
+    <title>Microeconomics 2026A | Dr. Shay Tsaban</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
     <style>
-        /* --- Basic Setup --- */
+        :root {
+            --primary-teal: #0d9488;
+            --primary-dark: #115e59;
+            --accent-green: #388e3c;
+            --bg-color: #f0fdfa;
+            --text-main: #1e293b;
+            --text-secondary: #475569;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --card-hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f3f5f7; /* Slightly different light background */
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(13, 148, 136, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
-        /* --- Main Content Card --- */
+        /* --- Layout --- */
         .container {
-            max-width: 900px;
-            width: 100%;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden; /* Ensures border-radius clips content */
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        /* --- Header Section (New Teal/Green Palette) --- */
+        /* --- Header --- */
         header {
             text-align: center;
-            padding: 40px 40px 30px 40px;
-            background: linear-gradient(135deg, #004d40, #00897b); /* Dark Teal to Medium Teal */
-            color: #ffffff;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.8em;
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -1px;
+            margin: 0;
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 1.4em;
-            font-weight: 300;
-            margin: 15px 0 0 0;
-            opacity: 0.9;
-        }
-        
-        .subtitle .fa-book-reader {
-            margin-right: 10px;
-            font-size: 0.9em;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
-        .instructor {
-            font-size: 1.2em;
+        .instructor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 9999px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+            color: var(--primary-dark);
             font-weight: 600;
-            margin: 20px 0 0 0;
-            padding: 10px 15px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            display: inline-block;
         }
 
-        /* --- Main Content Area --- */
-        main {
-            padding: 30px 40px;
-        }
-
+        /* --- Sections & Cards --- */
         section {
-            margin-bottom: 35px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
         }
 
         h2 {
-            font-size: 1.8em;
-            font-weight: 600;
-            color: #004d40; /* Dark Teal */
-            border-bottom: 3px solid #00897b; /* Medium Teal */
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            display: inline-block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: var(--primary-dark);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        /* --- About the Course Section --- */
-        #about p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
+        /* --- About List --- */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
         }
 
-        #about ul {
-            list-style-type: none;
-            padding-left: 0;
+        .feature-list li {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
         }
 
-        #about li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-            font-size: 1.05em;
+        .check-icon {
+            color: var(--primary-teal);
+            background: #ccfbf1;
+            padding: 0.25rem;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
         }
 
-        #about li::before {
-            content: '✔'; /* Checkmark icon */
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #388e3c; /* A nice, distinct green */
-            font-weight: bold;
-        }
-
-        /* --- Course Materials Section --- */
-        #materials p {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #00897b; /* Medium Teal */
-            color: #ffffff;
-            padding: 15px 30px;
+        /* --- Button --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1em;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 137, 123, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #00695c; /* Darker Teal on hover */
-            transform: translateY(-3px); /* Slight lift effect */
-            box-shadow: 0 8px 20px rgba(0, 137, 123, 0.4);
-        }
-
-        /* --- Footer Section --- */
-        footer {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px 0 rgba(13, 148, 136, 0.39);
+            width: 100%;
             text-align: center;
-            padding: 30px 40px;
-            background-color: #f9f9f9;
-            border-top: 1px solid #e9e9e9;
         }
 
-        .good-luck {
-            font-size: 1.6em;
-            font-weight: 600;
-            color: #388e3c; /* Positive green */
-            margin: 0 0 10px 0;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.23);
         }
 
-        .contact {
-            font-size: 1em;
-            color: #555;
-            margin: 0;
-        }
-
-        .contact a {
-            color: #00897b; /* Medium Teal */
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                margin: 10px auto;
-            }
-
-            header {
-                padding: 30px 25px 25px 25px;
-            }
-
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            .subtitle {
-                font-size: 1.2em;
-            }
-
-            .instructor {
-                font-size: 1.1em;
-            }
-            
-            main {
-                padding: 25px;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            .button {
-                width: 100%; /* Full width button on mobile */
-                text-align: center;
-                box-sizing: border-box; /* Include padding in width */
-                padding: 18px 30px;
+        @media (min-width: 640px) {
+            .btn {
+                width: auto;
             }
         }
-        
-        /* --- Lectures Section (NEW) --- */
-        #lectures .lecture-item {
-            margin-bottom: 30px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
+
+        /* --- Lecture Grid --- */
+        .lectures-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .lecture-card {
+            background: white;
+            border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
         }
 
-        #lectures .lecture-item h3 {
-            font-size: 1.3em;
+        .lecture-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .lecture-header {
+            padding: 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .lecture-title {
             font-weight: 600;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 15px 20px;
+            font-size: 1.1rem;
+            color: var(--text-main);
             margin: 0;
-            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .lecture-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+            display: block;
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 */
             height: 0;
-            overflow: hidden;
-            background-color: #000;
+            background: black;
         }
 
         .video-container iframe {
@@ -253,219 +223,288 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
         }
-        
+
+        /* --- Special "New" Badge --- */
+        .new-lecture {
+            border: 2px solid var(--primary-teal);
+            position: relative;
+        }
+
+        .new-badge {
+            background: var(--primary-teal);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0 0 0 0.5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-link {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <header>
-            <h1>Introduction to Microeconomics</h1>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h1>Introduction to <br>Microeconomics</h1>
             <p class="subtitle">
-                <i class="fas fa-book-reader"></i>
-                Materials site for semester 2026A
+                Semester 2026A
             </p>
-            <p class="instructor">
-                Instructor: Dr. Shay Tsaban, Ph.D.
-            </p>
+            <div class="instructor-badge">
+                <i class="fas fa-user-tie"></i>
+                Dr. Shay Tsaban, Ph.D.
+            </div>
         </header>
 
-        <main>
-            
-            <section id="about">
-                <h2>About the Course</h2>
-                <p>This course introduces the fundamental principles of microeconomics, focusing on how individuals and firms make decisions and interact in markets.</p>
-                <ul>
-                    <li>Understanding supply, demand, and market equilibrium</li>
-                    <li>Analyzing consumer behavior and utility maximization</li>
-                    <li>Exploring production costs and firm behavior</li>
-                    <li>Examining different market structures (e.g., perfect competition, monopoly)</li>
-                    <li>Applying concepts of elasticity to real-world scenarios</li>
-                </ul>
-            </section>
+        <section id="about">
+            <h2><i class="fas fa-bullseye"></i> Course Overview</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">
+                Explore fundamental principles of microeconomics, from individual decision-making to market structures.
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check check-icon"></i> Supply, Demand & Equilibrium</li>
+                <li><i class="fas fa-check check-icon"></i> Consumer Behavior & Utility</li>
+                <li><i class="fas fa-check check-icon"></i> Production Costs & Firms</li>
+                <li><i class="fas fa-check check-icon"></i> Market Structures & Monopoly</li>
+                <li><i class="fas fa-check check-icon"></i> Real-world Elasticity Scenarios</li>
+            </ul>
+        </section>
 
-            <section id="materials">
-                <h2>Course Materials</h2>
-                <p>Here you can find all the materials provided during the course by your instructor, including lecture notes, slides, and practice problems.</p>
-                
-                <a href="https://mypac-my.sharepoint.com/:x:/g/personal/shay_tsaban_pac_org_il/EXjIXr7UOB5Co1AXebvqXeMBg9Ynz0hfqKGMKtgDVfH6kQ?e=6r2lRg" class="button" target="_blank" rel="noopener noreferrer">
-                    Course Notes - 2026A
+        <section id="materials">
+            <div
+                style="display: flex; flex-direction: column; md:flex-row; align-items: center; justify-content: space-between; gap: 2rem;">
+                <div>
+                    <h2><i class="fas fa-folder-open"></i> Course Materials</h2>
+                    <p style="color: var(--text-secondary);">Access lecture notes, presentation slides, and practice
+                        problem sets.</p>
+                </div>
+                <a href="https://mypac-my.sharepoint.com/:x:/g/personal/shay_tsaban_pac_org_il/EXjIXr7UOB5Co1AXebvqXeMBg9Ynz0hfqKGMKtgDVfH6kQ?e=6r2lRg"
+                    class="btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-cloud-download-alt"></i> Download 2026A Notes
                 </a>
-            </section>
+            </div>
+        </section>
 
-            <section id="lectures">
-                <h2>Recorded Lectures</h2>
-                <div class="lecture-item">
-                    <h3>Lecture 1 - 28.10.2025 - Efficient Production Frontier and Basic Costs</h3>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/ZDuMeg-HPH0" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                
-                <div class="lecture-item">
-                    <h3>Lecture 2 - 4.11.2025 - Efficient Production Frontier - Building from Scratch Using Expertise Phenomena</h3>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/F1pbfzJ04Zw" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                
-                <div class="lecture-item">
-                    <h3>Lecture 3 - 11.11.2025 - Further Construction of PPF (Akumat Ha'tmura) Based on Specialization (Hitmahut)</h3>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/tBoaJ5A7aWI" 
-                            title="Lecture 3 - Further Construction of PPF (Akumat Ha'tmura) Based on Specialization (Hitmahut) - 11.11.2025" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
+        <section id="lectures">
+            <h2><i class="fas fa-video"></i> Recorded Lectures</h2>
+            <div class="lectures-grid">
 
-                <div class="lecture-item">
-                    <h3>Lecture 4 - 18.11.2025 - Expanding PPF (Akumat Ha'tmura) - Multiple Production Resources</h3>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/0laJYHCVt9U" 
-                            title="Lecture 4 - Expanding PPF - Multiple Production Resources" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                <!-- Lecture 1 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">28.10.2025</span>
+                        <h3 class="lecture-title">Lecture 1: Efficient Production Frontier & Basic Costs</h3>
                     </div>
-                </div>
-
-                <div class="lecture-item">
-                    <h3>Lecture 5 - 25.11.2025 - Expanding PPF (Akumat Ha'tmura) - Multiple Production Resources - and UNEMPLOYMENT</h3>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/Kmfh0IMArhM" 
-                            title="Lecture 5 - Expanding PPF and UNEMPLOYMENT" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/ZDuMeg-HPH0" title="Lecture 1"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 6 - 2.12.2025 - International Trade</h3>
+                <!-- Lecture 2 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">4.11.2025</span>
+                        <h3 class="lecture-title">Lecture 2: Building PPF from Scratch (Expertise Phenomena)</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/Oq8yU-F0nbg" 
-                            title="Lecture 6 - International Trade" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/F1pbfzJ04Zw" title="Lecture 2"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 7 - 9.12.2025 - Efficient Allocation</h3>
+                <!-- Lecture 3 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">11.11.2025</span>
+                        <h3 class="lecture-title">Lecture 3: Construction of PPF Based on Specialization</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/cK01mn_n0Kg" 
-                            title="Lecture 7 - Efficient Allocation" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/tBoaJ5A7aWI" title="Lecture 3"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 8 - 16.12.2025 - Production Function and Supply Curve</h3>
+                <!-- Lecture 4 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">18.11.2025</span>
+                        <h3 class="lecture-title">Lecture 4: Expanding PPF - Multiple Production Resources</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/zOhhL22MT0o" 
-                            title="Lecture 8 - Production Function and Supply Curve" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/0laJYHCVt9U" title="Lecture 4"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 9 - 23.12.2025 - The Basics of the Demand Curve</h3>
+                <!-- Lecture 5 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">25.11.2025</span>
+                        <h3 class="lecture-title">Lecture 5: PPF Expansion & Unemployment</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/7L7RbKrdr4E" 
-                            title="Lecture 9 - The Basics of the Demand Curve" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/Kmfh0IMArhM" title="Lecture 5"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 10 - 30.12.2025 - Demand Elasticity and Basic Equilibrium</h3>
+                <!-- Lecture 6 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">2.12.2025</span>
+                        <h3 class="lecture-title">Lecture 6: International Trade</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/8sgsmFlTIKU" 
-                            title="Lecture 10 - Demand Elasticity and Basic Equilibrium" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/Oq8yU-F0nbg" title="Lecture 6"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                <div class="lecture-item">
-                    <h3>Lecture 11 - Taxes and Subsidies - 6.1.2026</h3>
+                <!-- Lecture 7 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">9.12.2025</span>
+                        <h3 class="lecture-title">Lecture 7: Efficient Allocation</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/N063wNxKuTY" 
-                            title="Lecture 11 - Taxes and Subsidies - 6.1.2026" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/cK01mn_n0Kg" title="Lecture 7"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-                 <div class="lecture-item">
-                    <h3>Lecture 12 - Taxes and Subsidies - Consumers and Manufacturers Surplus - 13.1.2026</h3>
+                <!-- Lecture 8 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">16.12.2025</span>
+                        <h3 class="lecture-title">Lecture 8: Production Function & Supply Curve</h3>
+                    </div>
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/idg0iJCCycY" 
-                            title="Lecture 11 - Taxes and Subsidies - 6.1.2026" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/zOhhL22MT0o" title="Lecture 8"
+                            allowfullscreen></iframe>
                     </div>
-                </div>
+                </article>
 
-            </section>
-        </main>
+                <!-- Lecture 9 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">23.12.2025</span>
+                        <h3 class="lecture-title">Lecture 9: Basics of the Demand Curve</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7L7RbKrdr4E" title="Lecture 9"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- Lecture 10 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">30.12.2025</span>
+                        <h3 class="lecture-title">Lecture 10: Demand Elasticity & Basic Equilibrium</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/8sgsmFlTIKU" title="Lecture 10"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- Lecture 11 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">6.1.2026</span>
+                        <h3 class="lecture-title">Lecture 11: Taxes & Subsidies</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/N063wNxKuTY" title="Lecture 11"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- Lecture 12 -->
+                <article class="lecture-card">
+                    <div class="lecture-header">
+                        <span class="lecture-date">13.1.2026</span>
+                        <h3 class="lecture-title">Lecture 12: Consumer & Manufacturer Surplus</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/idg0iJCCycY" title="Lecture 12"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- NEW Lecture 13 -->
+                <article class="lecture-card new-lecture">
+                    <div class="new-badge">NEW</div>
+                    <div class="lecture-header" style="background: #f0fdfa;">
+                        <span class="lecture-date"
+                            style="color: var(--primary-teal); font-weight: 700;">20.1.2026</span>
+                        <h3 class="lecture-title" style="color: var(--primary-dark);">Lecture 13: Final & Important! 🎓
+                        </h3>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">Last but not
+                            least - Wrapping up the semester.</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/lAMDA2eeWlg" title="Lecture 13 - Final"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+            </div>
+        </section>
 
         <footer>
-            <p class="good-luck">Good Luck!</p>
-            <p class="contact">
-                For any questions, feel free to reach out: 
-                <a href="mailto:shay.tsaban@gmail.com">shay.tsaban@gmail.com</a>
+            <p style="font-size: 1.25rem; font-weight: 600; color: var(--primary-teal); margin-bottom: 1rem;">Good Luck
+                on the Exam!</p>
+            <p>
+                Questions? <a href="mailto:shay.tsaban@gmail.com" class="footer-link">shay.tsaban@gmail.com</a>
             </p>
+            <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 2rem;">© 2026 Dr. Shay Tsaban</p>
         </footer>
 
     </div>
 
 </body>
+
 </html>
